@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+import argparse
+from vy_parse import CodeFile
+
+
+if __name__ == '__main__':
+    PARSER = argparse.ArgumentParser(description='Turn the comment into user or dev json document')
+
+    PARSER.add_argument('file_path', type=str)
+    PARSER.add_argument(
+        '--userdoc',
+        help='Print out the user doc for a vyper file',
+        action='store_true'
+    )
+    PARSER.add_argument(
+        '--devdoc',
+        help='Print out the dev doc for a vyper file',
+        action='store_true'
+    )
+
+    ARGS = PARSER.parse_args()
+
+    if ARGS.userdoc:
+        CODE = CodeFile(ARGS.file_path)
+        CODE.print_json_user()
+
+    if ARGS.devdoc:
+        CODE = CodeFile(ARGS.file_path)
+        CODE.print_json_dev()
