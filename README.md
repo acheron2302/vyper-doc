@@ -106,4 +106,4 @@ You **MUST** follow this rule for the script to work:
 * The setup.sh is only support linux for now
 
 ## Contact
-email:acheron2302@protonmail.com
+email: acheron2302@protonmail.com
