@@ -101,7 +101,7 @@ The result on the above contract:
 #### notice
 You **MUST** follow this rule for the script to work:
 * **YOU MUST RUN THIS SCRIPT WITH VYPER COMPILER ALREADY OPEN AND RUN ON YOUR TERMINAL**. If you haven't install vyper compiler then you can follow [this instruction on their document](https://vyper.readthedocs.io/en/latest/installing-vyper.html)
-* This script only work if you put the **DOCUMENT INSIDE THE FUNCTION**
+* This script only work if you **write the NATSPEC INSIDE THE FUNCTION**
 * You can only have 1 dev and 1 notice and 1 author in each function. But if you need more than 1 then you can write in multiple line like in the example
 * The setup.sh is only support linux for now
 
