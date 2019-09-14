@@ -88,7 +88,7 @@ The result on the above contract:
                 "_value": "The value to store in this contract"
             }
         },
-        "send(address,uint256,bytes)": {
+        "get()": {
             "author": "acheron2302",
             "dev": "get back the value for this contract",
             "return": "the value that is store in this contract"
