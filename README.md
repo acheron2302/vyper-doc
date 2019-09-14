@@ -1,5 +1,4 @@
-# vyper-doc
-# Project Title
+# VYPER-DOC
 
 A python script to turn your docstring inside contract into json userdoc and devdoc like solidity compiler
 
