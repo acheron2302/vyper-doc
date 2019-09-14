@@ -98,7 +98,7 @@ The result on the above contract:
 
 ```
 
-#### notice
+#### Notice
 You **MUST** follow this rule for the script to work:
 * **YOU MUST RUN THIS SCRIPT WITH VYPER COMPILER ALREADY OPEN AND RUN ON YOUR TERMINAL**. If you haven't install vyper compiler then you can follow [this instruction on their document](https://vyper.readthedocs.io/en/latest/installing-vyper.html)
 * This script only work if you **write the natspec inside the function**
