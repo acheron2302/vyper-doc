@@ -33,8 +33,10 @@ This script use the [vyper document natspec](https://vyper.readthedocs.io/en/lat
 The example contract:
 ```
 x: uint256
+
+
 @public
-def store(uint256 _value):
+def store(_value: uint256):
   """
     @author acheron2302
     @notice store the value to this contract
@@ -42,7 +44,10 @@ def store(uint256 _value):
     @param _value The value to store in this contract
   """
   x = _value
-  
+
+
+@public
+@constant
 def get() -> uint256:
   """
     @author acheron2302
@@ -52,6 +57,7 @@ def get() -> uint256:
     @return the value that is store in this contract
   """
   return x
+
 ```
 
 To get back the user document run this command:
@@ -64,9 +70,6 @@ The result on the above contract:
     "methods": {
         "store(uint256)": {
             "notice": "store the value to this contract"
-        }
-        "get()": {
-            "notice": "get back the value store in this contract"
         }
     }
 }
@@ -83,18 +86,11 @@ The result on the above contract:
     "methods": {
         "store(uint256)": {
             "author": "acheron2302",
-            "dev": "store the value to this contract",
-            "params": {
-                "_value": "The value to store in this contract"
-            }
-        },
-        "get()": {
-            "author": "acheron2302",
-            "dev": "get back the value for this contract",
-            "return": "the value that is store in this contract"
+            "dev": "store the value to this contract"
         }
     }
 }
+
 
 ```
 
