@@ -100,6 +100,7 @@ You **MUST** follow this rule for the script to work:
 * This script only work if you **write the natspec inside the function**
 * You can only have 1 dev, 1 notice and 1 author in each function. But if you need more than 1 then you can write in multiple line like in the example
 * The setup.sh is only support linux for now
+* The reason the return function did not work is because my regex fucked up (gonna fix it)
 
 ## Contact
 email: acheron2302@protonmail.com
