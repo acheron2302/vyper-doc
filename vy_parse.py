@@ -43,7 +43,7 @@ class CodeFile:
         """
         code_file = self.file_code
         # The first group is the function name and the second group is the function body
-        p = re.compile(r'def (.+?)\(.+?\\n(.+?)\\n[a-zA-Z@#0-9]')
+        p = re.compile(r'def (.+?)\(.+?\\n(.+?)\\n([a-zA-Z@#0-9]|$)')
         result = p.findall(code_file)
 
         return result
@@ -170,9 +170,9 @@ class CodeFile:
                     param_dict = {param_name: param_body}
                     result_dict['methods'][each_func]['params'].update(param_dict)
 
-                # If the tag is @returns
-                if each_comment[0] == 'returns':
-                    result_dict['methods'][each_func]['returns'] = each_comment[1]
+                # If the tag is @return
+                if each_comment[0] == 'return':
+                    result_dict['methods'][each_func]['return'] = each_comment[1]
 
         return result_dict
 
