@@ -122,7 +122,7 @@ class CodeFile:
                 {
                     'author': 'the author of the function'
                     'dev': 'The context of @dev'
-                    'params':
+                    'param':
                     {
                         'first_param': 'context of first param'
                         'second_param': 'context of second param'
@@ -137,7 +137,7 @@ class CodeFile:
 
         for each_func in file_document_dict:
             result_dict['methods'][each_func] = {}
-            # In each function's document find @dev, @params, @author, @returns, @notice
+            # In each function's document find @dev, @param, @author, @returns, @notice
             regex_result = regex_notice.findall(file_document_dict[each_func])
 
             # if the result is @notice remove it
@@ -146,7 +146,7 @@ class CodeFile:
                 if each_comment[0] != 'notice':
                     dev_doc_dict.append(each_comment)
 
-            # find in each_func turn tag content into dict in order: @author, @dev, @params
+            # find in each_func turn tag content into dict in order: @author, @dev, @param
             for each_comment in dev_doc_dict:
                 # If the tag is @author
                 if each_comment[0] == 'author':
@@ -157,7 +157,7 @@ class CodeFile:
                     result_dict['methods'][each_func]['dev'] = each_comment[1]
 
                 # If the tag is @params
-                if each_comment[0] == 'params':
+                if each_comment[0] == 'param':
                     # Check if params dict have exists if not create one
                     if 'params' not in result_dict['methods'][each_func]:
                         result_dict['methods'][each_func]['params'] = {}
